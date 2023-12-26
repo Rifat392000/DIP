@@ -1,0 +1,14 @@
+image = imread("/MATLAB Drive/Lab 4/image2.jpg");
+gray_image = rgb2gray(image);
+robert = edge(gray_image, "roberts");
+sobel = edge(gray_image, "sobel");
+prewitt = edge(gray_image, "prewitt");
+figure;
+subplot(1, 4, 1), imshow(image);
+title("Original");
+subplot(1, 4, 2), imshow(robert);
+title("robert");
+subplot(1, 4, 3), imshow(sobel);
+title("Sobel");
+subplot(1, 4, 4), imshow(prewitt);
+title("Prewitt");

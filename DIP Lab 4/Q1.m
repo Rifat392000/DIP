@@ -1,0 +1,13 @@
+image = imread("/MATLAB Drive/Lab 4/image1.jpg");
+gray_image = rgb2gray(image);
+unsharp = imsharpen(image);
+HBF = [0 -1 0; -1 5 -1; 0 -1 0];
+temp = conv2(gray_image, HBF, "same");
+HBImage = uint8(temp);
+figure;
+subplot(1, 3, 1), imshow(image);
+title("Original");
+subplot(1, 3, 2), imshow(unsharp);
+title("Unsharp");
+subplot(1, 3, 3), imshow(HBImage);
+title("High Boost");

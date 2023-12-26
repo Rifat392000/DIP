@@ -1,0 +1,16 @@
+I1=imread("img1.png");
+I2=imread("img2.png");
+I1=imresize(I1, [500,500]);
+I2=imresize(I2, [500,500]); 
+Add_Image=imadd(I1,I2); 
+imshow(Add_Image);
+title('Addition'); 
+Sub_Image=imsubtract(I1,I2); 
+figure,imshow(Sub_Image);
+title('Subtraction');
+Mul_Image=immultiply(I1,I2);
+figure,imshow(Mul_Image); 
+title('Multiplication');
+Div_Image= imdivide(I1,I2); 
+figure,imshow(Div_Image);
+title('Division');
